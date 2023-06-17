@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #444444;
+}
+body{
+  background-image: linear-gradient(90deg, rgba(103,126,250,1), rgba(142,84,219,1));
+}
+h1{
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: aliceblue;
+  font-size: clamp(1.5rem, 0.955rem + 2.73vw, 3rem);
+  /*文字サイズのレスポンシブ, このサイトいいよ( https://min-max-calculator.9elements.com/ ) */
+}
+.inputContainer{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputContainer input{
+  padding: 10px 5px;
+  width: 50vw;
+  border: 0;
+  border-radius: 5px;
+}
+.inputContainer button{
+  cursor: pointer;
+  padding: 8px 20px;
+  border: none;
+  margin-left: 8px;
+  background: #f1e767;
+  font-weight: bold;
+  border-radius: 5px;
+}
+ul{
+  max-width: 1040px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  gap: 10px;
+}
+li{
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to top, #f1e767 0%, #ffe6be 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.removeButton{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+}
+.removeButton::before, .removeButton::after{
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #444444;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.removeButton::before{
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.removeButton::after{
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+li p{
+  overflow-wrap: break-word;
+}
+@media screen and (max-width: 1100px){
+  ul{
+    max-width: 620px;
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 630px){
+  ul{
+    max-width: 410px;
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 430px){
+  ul{
+    display: block;
+  }
+  li{
+    margin: 10px auto;
+  }
+}
