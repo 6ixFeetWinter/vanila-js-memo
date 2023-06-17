@@ -5,6 +5,7 @@ const onclick = () => {
     alert('メモを追加してください');
   }else{
     const text = textElement.value; //インプットタグの中身を変数テキストに格納
+    textElement.value = "";
 
     const li = document.createElement('li');
     const p = document.createElement('p');
