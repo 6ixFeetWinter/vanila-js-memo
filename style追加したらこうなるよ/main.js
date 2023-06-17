@@ -12,6 +12,7 @@ const onclick = () => {
     const ul = document.querySelector('.memoList');
 
     const removeButton = document.createElement('button');
+    //↓　removeButton.textContent = '削除' を　removeButton.classList.add('removeButton');　に
     removeButton.classList.add('removeButton');
     removeButton.addEventListener('click', () => {
       const target = removeButton.closest('li');

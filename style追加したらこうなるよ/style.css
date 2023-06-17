@@ -1,3 +1,4 @@
+/* style追加に伴って、htmlとjsを一部変えてます！*/
 *{
   margin: 0;
   padding: 0;
@@ -12,7 +13,6 @@ h1{
   margin: 40px 0 20px 0;
   color: aliceblue;
   font-size: clamp(1.5rem, 0.955rem + 2.73vw, 3rem);
-  /*文字サイズのレスポンシブ, このサイトいいよ( https://min-max-calculator.9elements.com/ ) */
 }
 .inputContainer{
   text-align: center;
